@@ -1,3 +1,7 @@
+using System;
+using System.Windows.Forms;
+using Lab12Library;
+
 namespace lab1._2._2
 {
     public partial class Form1 : Form
@@ -15,6 +19,21 @@ namespace lab1._2._2
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
