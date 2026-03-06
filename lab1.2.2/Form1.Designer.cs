@@ -28,39 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            txtSecNo = new TextBox();
+            txtResult = new TextBox();
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            txtFirstNo = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // txtSecNo
             // 
-            textBox1.Location = new Point(287, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(192, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtSecNo.Location = new Point(287, 110);
+            txtSecNo.Name = "txtSecNo";
+            txtSecNo.Size = new Size(192, 23);
+            txtSecNo.TabIndex = 1;
+            txtSecNo.Tag = "txtSecNo";
+            txtSecNo.TextChanged += textBox2_TextChanged;
             // 
-            // textBox2
+            // txtResult
             // 
-            textBox2.Location = new Point(287, 110);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(192, 23);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(287, 203);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(192, 23);
-            textBox3.TabIndex = 2;
-            textBox3.TextChanged += textBox3_TextChanged;
+            txtResult.Location = new Point(287, 203);
+            txtResult.Name = "txtResult";
+            txtResult.Size = new Size(192, 23);
+            txtResult.TabIndex = 2;
+            txtResult.Tag = "txtResult";
+            txtResult.TextChanged += textBox3_TextChanged;
             // 
             // button1
             // 
@@ -68,7 +62,7 @@
             button1.Name = "button1";
             button1.Size = new Size(86, 23);
             button1.TabIndex = 3;
-            button1.Text = "Addition";
+            button1.Text = "Dodaj";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -78,8 +72,9 @@
             button2.Name = "button2";
             button2.Size = new Size(85, 23);
             button2.TabIndex = 4;
-            button2.Text = "Subtraction";
+            button2.Text = "Odejmij";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -108,19 +103,27 @@
             label3.TabIndex = 7;
             label3.Text = "Result";
             // 
+            // txtFirstNo
+            // 
+            txtFirstNo.Location = new Point(287, 65);
+            txtFirstNo.Name = "txtFirstNo";
+            txtFirstNo.Size = new Size(192, 23);
+            txtFirstNo.TabIndex = 9;
+            txtFirstNo.Tag = "txtFirstNo";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(txtFirstNo);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtResult);
+            Controls.Add(txtSecNo);
             Name = "Form1";
             Text = "Form1";
             ParentChanged += Form1_ParentChanged;
@@ -129,14 +132,13 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox txtSecNo;
+        private TextBox txtResult;
         private Button button1;
         private Button button2;
         private Label label1;
         private Label label2;
         private Label label3;
+        private TextBox txtFirstNo;
     }
 }
